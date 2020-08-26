@@ -1,1 +1,1 @@
-# code-dipans
+Join My Server = https://discord.gg/JHucEDP
