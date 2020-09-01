@@ -15,7 +15,8 @@ http.get('http://discord-tutori4l.glitch.me/');
 }, 280000);
 client.on("ready", async () => {
   console.log(`${client.user.tag} sudah online!`);
-  client.user.setActivity("d!help");
+  client.user.setActivity("dm!help");
+  client.user.setStatus('idle') //status idle(kuning)
 });
 client.on("message", async message => {
   if (message.content === "hai") message.reply("Hai trosss");
@@ -27,7 +28,7 @@ client.on("message", async message => {
   if (message.content === "konnichiwa") message.reply("konnichiwa");
   if (message.content === "kontol") message.reply("dont toxic")
 //COMMAND BOT DI SERVER.JS
-const prefix = "d!"
+const prefix = "dm!"
 if(!message.content.startsWith(prefix)) return null;
 let msg = message.content.toLowerCase();
 let args = message.content.slice(prefix.length).trim().split(" ");
@@ -43,18 +44,6 @@ try{
 
 }
 const db = require("quick.db")
-const now = Date.now()
-if(db.has(`cd_${message.author.id}`)) {
-  const expirationTime = db.get(`cd_${message.author.id}`) + 3000
-  if(now < expirationTime) {
-  const timeLeft = (expirationTime - now) / 1000;
-		return message.reply(`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${cmd}\` command.`);
-  }
-}
-  db.set(`cd_${message.author.id}`, now);
-  setTimeout(() => {
-    db.delete(`cd_${message.author.id}`)
-  },3000)
 try {
   commandFiles.run(client, message, args)
 } catch (err) {
