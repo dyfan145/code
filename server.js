@@ -19,7 +19,7 @@ client.on("ready", async () => {
   client.user.setStatus('idle') //status idle(kuning)
 });
 client.on("message", async message => {
-  if (message.content === "hai") message.reply("Hai trosss");
+   if (message.content === "hai") message.reply("Hai trosss");
   if (message.content === "halo") message.reply("haloo");
   if (message.content === "oi") message.reply("Assalamualaikum");
   if (message.content === "alo") message.reply("alo");
@@ -27,6 +27,15 @@ client.on("message", async message => {
   if (message.content === "poker?") message.reply("JUDI TOLOL");
   if (message.content === "konnichiwa") message.reply("konnichiwa");
   if (message.content === "kontol") message.reply("dont toxic")
+  if (message.content === "login") message.reply("lol")
+   if (message.content === "lol") message.reply("of block")
+  if (message.content === "d1") message.channel.send("Be Youself And Never Surrender");
+  if (message.content === "D1") message.channel.send("Be Youself And Never Surrender");
+  if (message.content === "d2") message.channel.send("3 LOLI MILKITA SETARA DENGAN 120 KALORI");
+  if (message.content === "D2") message.channel.send("3 LOLI MILKITA SETARA DENGAN 120 KALORI");
+ if (message.content === "discord embed") message.reply("https://cog-creators.github.io/discord-embed-sandbox/")
+if (message.content === "kirim pesan plis") message.author.send("oke")
+if (message.content === "d!help") message.reply("Check Your Dm :slight_smile:");
 //COMMAND BOT DI SERVER.JS
 const prefix = "dm!"
 if(!message.content.startsWith(prefix)) return null;
