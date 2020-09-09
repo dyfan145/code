@@ -129,4 +129,37 @@ client.on('guildMemberRemove', async member => {
       attachment
     );   
    });
+
+//pastebin
+client.on("message", async message => {
+  if(message.content === "pastebin") {
+    let embed = new MessageEmbed()
+  .setTitle('PasteBin')
+  .setColor('BLUE')
+    .addField(`Paste Bin `,`[\`Here\`](https://pastebin.com/)`)
+  message.channel.send(embed)
+}
+})
+
+//hastebin
+client.on("message", async message => {
+  if(message.content === "hastebin") {
+    let embed = new MessageEmbed()
+  .setTitle('HasteBin')
+  .setColor('BLUE')
+    .addField(`Haste Bin `,`[\`Here\`](https://hastebin.com/)`)
+  message.channel.send(embed)
+}
+})
+//embed docs
+client.on("message", async message => {
+  if(message.content === "embed example") {
+    let embed = new MessageEmbed()
+  .setTitle('Embed Example')
+  .setColor('BLUE')
+    .addField(`Embed Example `,`[\`Here\`](https://pastebin.com/md5vbq0Q)`)
+  message.channel.send(embed)
+}
+}) 
+
 client.login(process.env.TOKEN);
