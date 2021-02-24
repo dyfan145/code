@@ -5,8 +5,6 @@ exports.run = async (client, message) => {
   .setTitle('Help Commands')
   .setColor('BLUE')
   .setThumbnail(client.user.displayAvatarURL({format: 'png', dynamic: true})+"?size=2048")
-  .addField(`Economy:dollar:`,`\`transfer\` \`balance\` \`flip\` \`daily\``)
-  .addField(`Music:musical_note:`,`\`play\` \`stop\` \`skip\` \`leave\` \`queue\` \`nowplaying\` \`resume\` \`forceskip\` \`playlist\` \`remove\` \`volume\``)
   .addField(`Fun:slight_smile:`,`\`snipe\` \`weather\` \`meme\` \`say\` \`avatar\` \`eval\` \`ping\` \`calculate\``)
   .addField(`Bot Info:robot:`,`\`stats\` \`uptime\` \`invite\``)
   .addField(`Administrator:shield:`,`\`kick\` \`warn\` \`clear\``)
